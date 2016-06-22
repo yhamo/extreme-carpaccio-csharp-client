@@ -13,6 +13,7 @@ namespace xCarpaccio.client
             decimal totalSumTX = 0;
             for (int i = 0; i < order.Prices.Length; i++)
             {
+                
                 sumArticle = order.Prices[i] * order.Quantities[i];
                 totalSum += sumArticle;
 
