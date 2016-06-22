@@ -24,7 +24,7 @@ namespace xCarpaccio.client
                 Bill bill = BillCalculator.CalculerPrice(order);
                 //return bill;
                  //return bill.total;
-                return null;
+                return bill;
             };
 
             Post["/feedback"] = _ =>
