@@ -7,10 +7,14 @@ namespace xCarpaccio.client
     {
         public static Bill CalculerPrice(Order order)
         {
+            // Variable 
+
             Bill billFacture = new Bill();
             decimal sumArticle = 0;
             decimal totalSum = 0;
             decimal totalSumTX = 0;
+
+            // parcour d'une facture
             for (int i = 0; i < order.Prices.Length; i++)
             {
                 
@@ -80,6 +84,9 @@ namespace xCarpaccio.client
                 }
 
             }
+
+            // Ajout de la Reduction 
+
             if (order.Reduction != "PAY THE PRICE")
             {
                 if (totalSumTX >= 1000)
