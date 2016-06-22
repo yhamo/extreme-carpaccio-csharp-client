@@ -21,12 +21,10 @@ namespace xCarpaccio.client
                 }
 
                 var order = this.Bind<Order>();
-                Bill bill = null;
-                //TODO: do something with order and return a bill if possible
-                // If you manage to get the result, return a Bill object (JSON serialization is done automagically)
-                // Else return a HTTP 404 error : return Negotiate.WithStatusCode(HttpStatusCode.NotFound);
-                
-                return bill;
+                Bill bill = BillCalculator.CalculerPrice(order);
+                //return bill;
+                 //return bill.total;
+                return null;
             };
 
             Post["/feedback"] = _ =>
